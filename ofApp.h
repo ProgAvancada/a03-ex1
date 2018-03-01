@@ -4,6 +4,8 @@
 #include "ofMain.h"
 #include "ButtonObserver.h"
 
+//Observe que ofApp agora implementa a interface ButtonObserver
+//E, portanto, tambem define o método onClick()
 class ofApp : public ofBaseApp, ButtonObserver{
 	private:	
 		Button* btnCircle;
@@ -18,6 +20,7 @@ class ofApp : public ofBaseApp, ButtonObserver{
 		void update();
 		void draw();
 
+        //Implementação do método onClick da interface ButtonObserver
 		virtual void onClick(Button* source);
 
 		void keyPressed(int key);
